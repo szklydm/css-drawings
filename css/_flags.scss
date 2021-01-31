@@ -1,0 +1,29 @@
+.flag {
+  margin: 2rem;
+}
+
+.sweden {
+  --flag-swe-unit: 2rem;
+  background-color: $clr-flags-swe-blue;
+  height: $flag-swe-unit * 10;
+  width: $flag-swe-unit * 16;
+  position: relative;
+
+  .cross {
+    background-color: $clr-flags-swe-yellow;
+    position: absolute;
+  }
+
+  .cross-hor {
+    width: 100%;
+    height: $flag-swe-unit * 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .cross-ver {
+    height: 100%;
+    width: $flag-swe-unit * 2;
+    left: $flag-swe-unit * 5;
+  }
+}
