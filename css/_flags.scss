@@ -1,12 +1,11 @@
 .flag {
-  margin: 2rem;
+  margin: 5rem;
 }
 
 .sweden {
-  --flag-swe-unit: 2rem;
   background-color: $clr-flags-swe-blue;
-  height: $flag-swe-unit * 10;
-  width: $flag-swe-unit * 16;
+  height: $size-flag-swe-unit * 10;
+  width: $size-flag-swe-unit * 16;
   position: relative;
 
   .cross {
@@ -16,14 +15,90 @@
 
   .cross-hor {
     width: 100%;
-    height: $flag-swe-unit * 2;
+    height: $size-flag-swe-unit * 2;
     top: 50%;
     transform: translateY(-50%);
   }
 
   .cross-ver {
     height: 100%;
-    width: $flag-swe-unit * 2;
-    left: $flag-swe-unit * 5;
+    width: $size-flag-swe-unit * 2;
+    left: $size-flag-swe-unit * 5;
+  }
+}
+
+.union-jack {
+  background-color: $clr-flags-uk-blue;
+  height: $size-flag-uk-unit * 30;
+  width: $size-flag-uk-unit * 50;
+  position: relative;
+  overflow: hidden;
+
+  .diagonal {
+    background-color: $clr-flags-uk-white;
+    width: 120%;
+    height: $size-flag-uk-unit * 6;
+    position: absolute;
+
+    .stripe {
+      background-color: $clr-flags-uk-red;
+      width: $size-flag-uk-unit * 30;
+      height: $size-flag-uk-unit * 2;
+      position: absolute;
+    }
+  }
+
+  .tlbr {
+    top: $size-flag-uk-unit * -3;
+    left: 0;
+    transform: rotate(30.96deg);
+    transform-origin: left center;
+
+    .stripe1 {
+      top: 50%;
+      left: 0;
+    }
+
+    .stripe2 {
+      bottom: 50%;
+      right: 0;
+    }
+  }
+
+  .trbl {
+    bottom: $size-flag-uk-unit * -3;
+    left: 0;
+    transform: rotate(-30.96deg);
+    transform-origin: left center;
+
+    .stripe1 {
+      top: 50%;
+      left: 0;
+    }
+
+    .stripe2 {
+      bottom: 50%;
+      right: 0;
+    }
+  }
+
+  .cross {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .white-cross {
+    background-color: $clr-flags-uk-white; 
+    clip-path: polygon(40% 0, 60% 0, 60% 33%,100% 33%, 100% 66%, 60% 66%,60% 100%, 40% 100%, 40% 66%,0 66%, 0 33%, 40% 33%);
+  }
+
+  .red-cross {
+    background-color: $clr-flags-uk-red;
+    clip-path: polygon(
+      44% 0, 56% 0, 56% 40%, 100% 40%, 100% 60%, 56% 60%, 56% 100%, 44% 100%, 44% 60%, 0 60%, 0 40%, 44% 40%
+    );
   }
 }
