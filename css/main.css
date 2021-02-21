@@ -151,4 +151,38 @@ section {
   -webkit-clip-path: polygon(44% 0, 56% 0, 56% 40%, 100% 40%, 100% 60%, 56% 60%, 56% 100%, 44% 100%, 44% 60%, 0 60%, 0 40%, 44% 40%);
           clip-path: polygon(44% 0, 56% 0, 56% 40%, 100% 40%, 100% 60%, 56% 60%, 56% 100%, 44% 100%, 44% 60%, 0 60%, 0 40%, 44% 40%);
 }
+
+.heart__shape {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.heart__container {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.heart .part {
+  background-color: salmon;
+  --size: 15rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.heart .circle {
+  border-radius: 50%;
+}
+
+.heart .circle:first-of-type {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.heart .circle:last-of-type {
+  -webkit-transform: translate(50%, -100%);
+          transform: translate(50%, -100%);
+}
 /*# sourceMappingURL=main.css.map */
